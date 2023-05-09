@@ -10,11 +10,12 @@ function string() {
 function alat() {
         clear
         echo "MASUKAN BAHAN U-BOT YANG BENAR"
-        read -e -p "Input your API_KEY" API_KEY
-        read -e -p "Input your API_HASH" API_HASH
-        read -e -p "Input your BOT_TOKEN" BOT_TOKEN
-        read -e -p "Input your BOTLOG_CHATID" BOTLOG_CHATID
-        read -e -p "Input your STRING_SESSION" STRING_SESSION
+        read -e -p "Input your USERNAME : " USER
+        read -e -p "Input your API_KEY : " API_KEY
+        read -e -p "Input your API_HASH : " API_HASH
+        read -e -p "Input your BOT_TOKEN : " BOT_TOKEN
+        read -e -p "Input your BOTLOG_CHATID : " BOTLOG_CHATID
+        read -e -p "Input your STRING_SESSION : " STRING_SESSION
 }
 function sql() {
 read -e -p "Install PostgreSQL database? [y/n] " -i "y" installpg
@@ -69,7 +70,7 @@ chmod +x /usr/bin/man-ft
 cat >/etc/systemd/system/man-ft.service <<-END
                                                                                    
 [Unit]
-Description=bhoikfostyahya bot service
+Description=Man-FT bot service
 Documentation=FighterTunnel
 After=syslog.target network-online.target
 
