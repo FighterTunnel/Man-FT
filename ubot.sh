@@ -43,7 +43,7 @@ if [ "$installpg" = "y" ]; then
         wget --quiet -O -q - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
         sudo apt-get update
         sudo apt-get install postgresql-9.6 -y
-        sudo -u postgres psql postgres
+        #sudo -u postgres psql postgres
         sudo -u postgres createuser -P -s -e $USER
         sudo -u postgres createdb -O $USER $USER
         sudo -u postgres psql $USER -h 127.0.0.1 $USER
