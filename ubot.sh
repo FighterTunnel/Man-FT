@@ -87,7 +87,7 @@ cat >/usr/bin/man-ft <<END
 #!/bin/bash
 
 cd /etc/bot/Man-FT
-python3.8 -m userbot
+python3.8 -m ft
 END
 chmod +x /usr/bin/man-ft
 
