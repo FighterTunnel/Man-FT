@@ -64,22 +64,24 @@ function defn() {
         pip3.8 install -r requirements.txt
 }
 function service_ubot() { 
-cat >/etc/bot/config.env << END
+cat >/etc/bot/Man-FT/config.env <<END
 API_KEY = "$API_KEY"
 API_HASH = "$API_HASH"
 STRING_SESSION = "$STRING_SESSION"
 BOT_TOKEN = "$BOT_TOKEN"
 BOTLOG_CHATID = $BOTLOG_CHATID
-DATABASE_URL = ""postgres://$USER:$USER@localhost:5432/$USER""
+DATABASE_URL = "postgres://$USER:$USER@localhost:5432/$USER"
 PM_AUTO_BAN = False
- END     
-cat >/usr/bin/man-ft << END
+END   
+
+cat >/usr/bin/man-ft <<END
 #!/bin/bash
 
 cd /etc/bot/Man-FT
 python3.8 -m userbot
 END
 chmod +x /usr/bin/man-ft
+
 cat >/etc/systemd/system/man-ft.service <<-END
                                                                                    
 [Unit]
