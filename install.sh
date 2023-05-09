@@ -13,7 +13,7 @@ pip3.8 install -r requirements.txt
 cat >/usr/bin/man-ft << EOF
 #!/bin/bash
 
-cd /etc/bot/man-ft
+cd /etc/bot/Man-FT
 python3.8 -m userbot
 EOF
 chmod +x /usr/bin/man-ft
