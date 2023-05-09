@@ -8,6 +8,13 @@ function string() {
         fi
 }
 function alat() {
+        sec=5
+        spinner=(⣻ ⢿ ⡿ ⣟ ⣯ ⣷)
+        while [ $sec -gt 0 ]; do
+                echo -ne "\e[33m ${spinner[sec]} Setting up a Premium Account $sec seconds...\r"
+                sleep 1
+                sec=$(($sec - 1))
+        done
         clear
         echo "MASUKAN BAHAN U-BOT YANG BENAR"
         read -e -p "Input your USERNAME : " USER
