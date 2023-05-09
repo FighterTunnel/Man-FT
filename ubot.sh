@@ -1,13 +1,12 @@
 #!/bin/bash
-
-function string{} {
+function string() {
         read -e -p "Create String Sessions? [y/n] " -i "n" str
         if [ "$str" = "y" ]; then
                 python3.8 /etc/bot/ft/resources/session/str.py
 
         fi
 }
-function alat{} {
+function alat() {
         echo "ISI NAMA ANDA [JANGAN PAKAI SPASI]"
         read -p USER
         echo "API_KEY"
@@ -21,7 +20,7 @@ function alat{} {
         echo "STRING_SESSION"
         read -p STRING_SESSION
 }
-function sql{} {
+function sql() {
 read -e -p "Install PostgreSQL database? [y/n] " -i "n" installpg
 if [ "$installpg" = "y" ]; then
         sudo add-apt-repository "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -sc)-pgdg main"
@@ -39,7 +38,7 @@ if [ "$createdb" = "y" ]; then
 
 fi
 }
-function defn{} {
+function defn() {
         mkdir /etc/bot/
         cd /etc/bot/
         apt update -y
@@ -54,8 +53,8 @@ function defn{} {
         pip3.8 install --upgrade pip
         pip3.8 install -r requirements.txt
 }
-function service_ubot{} { 
-cat >/etc/bot/config.env <<EOF
+function service_ubot() { 
+cat >/etc/bot/config.env << END
 API_KEY = "$API_KEY"
 API_HASH = "$API_HASH"
 STRING_SESSION = "$STRING_SESSION"
@@ -63,7 +62,7 @@ BOT_TOKEN = "$BOT_TOKEN"
 BOTLOG_CHATID = $BOTLOG_CHATID
 DATABASE_URL = ""postgres://$USER:$USER@localhost:5432/$USER""
 PM_AUTO_BAN = False
-EOF        
+ END     
 cat >/usr/bin/man-ft << END
 #!/bin/bash
 
@@ -93,7 +92,7 @@ systemctl restart man-ft
 systemctl status man-ft
 
 }
-function main{} {
+function main() {
         defn
         string
         alat
