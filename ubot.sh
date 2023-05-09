@@ -1,27 +1,23 @@
 #!/bin/bash
 function string() {
-        read -e -p "Create String Sessions? [y/n] " -i "n" str
+        clear
+        read -e -p "Create String Sessions? [y/n] " -i "y" str
         if [ "$str" = "y" ]; then
-                python3.8 /etc/bot/ft/resources/session/str.py
+                python3.8 /etc/bot/Man-FT/ft/resources/session/str.py
 
         fi
 }
 function alat() {
-        echo "ISI NAMA ANDA [JANGAN PAKAI SPASI]"
-        read -p USER
-        echo "API_KEY"
-        read -p API_KEY
-        echo "API_HASH"
-        read -p API_HASH
-        echo "BOT_TOKEN"
-        read -p BOT_TOKEN
-        echo "BOTLOG_CHATID"
-        read -p BOTLOG_CHATID
-        echo "STRING_SESSION"
-        read -p STRING_SESSION
+        clear
+        echo "MASUKAN BAHAN U-BOT YANG BENAR"
+        read -e -p "Input your API_KEY" API_KEY
+        read -e -p "Input your API_HASH" API_HASH
+        read -e -p "Input your BOT_TOKEN" BOT_TOKEN
+        read -e -p "Input your BOTLOG_CHATID" BOTLOG_CHATID
+        read -e -p "Input your STRING_SESSION" STRING_SESSION
 }
 function sql() {
-read -e -p "Install PostgreSQL database? [y/n] " -i "n" installpg
+read -e -p "Install PostgreSQL database? [y/n] " -i "y" installpg
 if [ "$installpg" = "y" ]; then
         sudo add-apt-repository "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -sc)-pgdg main"
         wget --quiet -O -q - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
@@ -31,7 +27,7 @@ if [ "$installpg" = "y" ]; then
 
 fi
 
-read -e -p "Create Database and user? [y/n] " -i "n" createdb
+read -e -p "Create Database and user? [y/n] " -i "y" createdb
 if [ "$createdb" = "y" ]; then
         sudo -u postgres createuser -D -A -P $USER
         sudo -u postgres createdb -O $USER $USER
@@ -93,11 +89,7 @@ systemctl status man-ft
 
 }
 function main() {
-        defn
-        string
-        alat
-        sql
-        service_ubot
+        defn ; string ; alat ; sql ; service_ubot 
 }
 
 main "#@"
