@@ -29,8 +29,14 @@ function alat() {
         read -e -p "Input your BOT_TOKEN : " BOT_TOKEN
         read -e -p "Input your BOTLOG_CHATID : " BOTLOG_CHATID
         read -e -p "Input your STRING_SESSION : " STRING_SESSION
+        export USER=$USER
 }
 function sql() {
+echo "--------------------------------------------"
+echo "This script will install PostgreSQL."
+echo "and create alfresco database and user."
+echo "You may be prompted for sudo password."
+echo "--------------------------------------------"
 read -e -p "Install PostgreSQL database? [y/n] " -i "y" installpg
 if [ "$installpg" = "y" ]; then
         sudo add-apt-repository "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -sc)-pgdg main"
@@ -38,15 +44,18 @@ if [ "$installpg" = "y" ]; then
         sudo apt-get update
         sudo apt-get install postgresql-9.6 -y
         sudo -u postgres psql postgres
-
-fi
-
-read -e -p "Create Database and user? [y/n] " -i "y" createdb
-if [ "$createdb" = "y" ]; then
-        sudo -u postgres createuser -D -A -P $USER
+        sudo -u postgres createuser -P -s -e $USER
         sudo -u postgres createdb -O $USER $USER
-
+        sudo -u postgres psql $USER -h 127.0.0.1 $USER
+        \q
 fi
+
+#read -e -p "Create Database and user? [y/n] " -i "y" createdb
+#if [ "$createdb" = "y" ]; then
+#        sudo -u postgres createuser -D -A -P $USER
+#        sudo -u postgres createdb -O $USER $USER
+#
+#fi
 }
 function defn() {
         mkdir /etc/bot/
