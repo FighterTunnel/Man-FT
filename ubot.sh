@@ -43,11 +43,17 @@ if [ "$installpg" = "y" ]; then
         wget --quiet -O -q - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
         sudo apt-get update
         sudo apt-get install postgresql-9.6 -y
-        #sudo -u postgres psql postgres
-        sudo -u postgres createuser -P -s -e $USER
-        sudo -u postgres createdb -O $USER $USER
-        sudo -u postgres psql $USER -h 127.0.0.1 $USER
-        \q
+sudo su postgres <<EOF
+
+createdb  $USER;
+
+psql -c "CREATE USER $USER WITH PASSWORD '$USER';"
+
+psql -c "grant all privileges on database $USER to $USER;"
+
+echo "Postgres User '$USER' and database '$USER' created."
+
+EOF
 fi
 
 #read -e -p "Create Database and user? [y/n] " -i "y" createdb
