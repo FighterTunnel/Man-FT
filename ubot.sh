@@ -11,7 +11,7 @@ function alat() {
         sec=5
         spinner=(⣻ ⢿ ⡿ ⣟ ⣯ ⣷)
         while [ $sec -gt 0 ]; do
-                echo -ne "\e[33m ${spinner[sec]} Setting up a Premium Account $sec seconds...\r"
+                echo -ne "\e[33m ${spinner[sec]} Generator UserBoy $sec seconds...\r"
                 sleep 1
                 sec=$(($sec - 1))
         done
