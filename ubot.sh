@@ -30,6 +30,10 @@ function alat() {
         read -e -p "Input your BOTLOG_CHATID : " BOTLOG_CHATID
         read -e -p "Input your STRING_SESSION : " STRING_SESSION
         export USER=$USER
+        export API_KEY=$API_KEY
+        export API_HASH=$API_HASH
+        python3.8 /etc/bot/Man-FT/ft/resources/session/str.py
+        
 }
 function sql() {
 echo "--------------------------------------------"
@@ -120,7 +124,7 @@ systemctl status man-ft
 
 }
 function main() {
-        defn ; string ; alat ; sql ; service_ubot 
+        defn ; alat ; sql ; service_ubot 
 }
 
 main "#@"
