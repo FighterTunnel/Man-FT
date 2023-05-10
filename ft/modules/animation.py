@@ -18,7 +18,7 @@ async def _(event):
         "`081584099035`\n"
         "ᴀ/ɴ ɴᴜʀʏᴀʜʏᴀ ᴍᴜʜᴀɪᴍɪɴ \n"        
         "ᴅᴀɴᴀ, ᴏᴠᴏ, ꜱʜᴏᴘᴇᴇᴘᴀʏ, ɢᴏᴘᴀʏ\n"
-        "**✦ [QIRS](https://telegraph-image.pages.dev/file/f67169efcbe26ea100524.png) ✦**\n"
+        "**✦ [QRIS](https://telegraph-image.pages.dev/file/f67169efcbe26ea100524.png) ✦**\n"
     )
     
 @man_cmd(pattern="sc(?: |$)(.*)")
@@ -36,7 +36,7 @@ async def _(event):
         "`081584099035`\n"
         "ᴀ/ɴ ɴᴜʀʏᴀʜʏᴀ ᴍᴜʜᴀɪᴍɪɴ \n"        
         "ᴅᴀɴᴀ, ᴏᴠᴏ, ꜱʜᴏᴘᴇᴇᴘᴀʏ, ɢᴏᴘᴀʏ\n"
-        "**✦ [QIRS](https://telegraph-image.pages.dev/file/f67169efcbe26ea100524.png) ✦**\n"
+        "**✦ [QRIS](https://telegraph-image.pages.dev/file/f67169efcbe26ea100524.png) ✦**\n"
 
     )
 
