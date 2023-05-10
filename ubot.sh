@@ -32,7 +32,7 @@ function string() {
         clear
         echo "1. SIAPKAN API_ID/ API_KEY (my.telegram.org)"
         echo "2. SIAPKAN API_HASH (my.telegram.org)"
-        echo "3. MASULAN NOMER TELEGRAM (CONTOH FORMAT +62815768895)"
+        echo "3. MASUKAN NOMER TELEGRAM (CONTOH FORMAT +62815768895)"
         echo ""
         read -e -p "Create String Sessions? [y/n] " -i "y" str
         if [ "$str" = "y" ]; then
