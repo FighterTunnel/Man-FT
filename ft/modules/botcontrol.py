@@ -900,7 +900,7 @@ async def bot_start(event):
                         \n\n**Saya adalah {my_first}** \
                         \n**Anda dapat menghubungi [{OWNER}](tg://user?id={OWNER_ID}) dari sini.**\
                         \n**Jangan melakukan spam atau anda akan di Banned**\
-                        \n\n**Powered by** [ft](https://github.com/mrismanaziz/Man-ft)"
+                        \n\n**Powered by** [Man-FT](https://github.com/FighterTunnel/Man-FT)"
         buttons = [
             (
                 Button.url("ɢʀᴏᴜᴘ", f"https://t.me/{GROUP}"),
