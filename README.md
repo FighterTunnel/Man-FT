@@ -29,7 +29,9 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan userbot ini dengan bijak
 <br>
     
 ### REQUIREMENTS PACKAGE !
-```wget github.com/FighterTunnel/Man-FT/raw/main/ubot.sh && bash ubot.sh```
+```
+wget github.com/FighterTunnel/Man-FT/raw/main/ubot.sh && chmod +x ubot.sh && ./ubot.sh
+```
 
 
 ## Updates & Support
