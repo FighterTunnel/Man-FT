@@ -54,4 +54,4 @@ Follow Channel [@channel_fightertunnell](https://t.me/channel_fightertunnell) un
 
 ## License
 Licensed under [Raphielscape Public License](https://github.com/mrismanaziz/Man-Userbot/blob/Man-Userbot/LICENSE) - Version 1.d, February 2020
-# THKNS Man-Userbot
+# THANKS Man-Userbot - INDONESIA
