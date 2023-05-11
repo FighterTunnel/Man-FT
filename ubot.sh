@@ -110,7 +110,6 @@ EOF
 }
 function defn() {
         mkdir /etc/bot/
-        cd /etc/bot/
         apt update -y
         sudo apt install python3 -y
         sudo apt install python3-pip -y
@@ -118,12 +117,13 @@ function defn() {
         pip3.8 install telethon
         python_up
         sudo apt install tree wget2 p7zip-full jq ffmpeg wget git -y
-        git clone https://github.com/FighterTunnel/Man-FT.git
         curl -fsSL https://deb.nodesource.com/setup_16.x | sudo bash -
         sudo apt install -y nodejs vim
         wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
         sudo apt install -y ./google-chrome-stable_current_amd64.deb
         rm -rf google-chrome-stable_current_amd64.deb
+        cd /etc/bot/
+        git clone https://github.com/FighterTunnel/Man-FT.git
         wget -q https://raw.githubusercontent.com/mrismanaziz/Man-Userbot/Man-Userbot/requirements.txt
         pip3.8 install --upgrade pip
         pip3.8 install -r requirements.txt
