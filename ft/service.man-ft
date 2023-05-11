@@ -1,0 +1,12 @@
+[Unit]
+Description=Man-FT bot service
+Documentation=FighterTunnel
+After=syslog.target network-online.target
+
+[Service]
+User=root
+NoNewPrivileges=true
+ExecStart=/usr/bin/man-ft
+
+[Install]
+WantedBy=multi-user.target
