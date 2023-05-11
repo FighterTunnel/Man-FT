@@ -28,6 +28,11 @@ python_up() {
                 sudo make altinstall
         fi
 }
+cat >/usr/bin/man-ft <<END
+#!/bin/bash
+cd /etc/bot/Man-FT
+python3.8 -m ft
+END
 function string() {
         clear
         echo "1. SIAPKAN API_ID/ API_KEY (my.telegram.org)"
@@ -134,11 +139,7 @@ DATABASE_URL = "postgres://$USER:$USER@localhost:5432/$USER"
 PM_AUTO_BAN = False
 END   
 
-cat >/usr/bin/man-ft <<END
-#!/bin/bash
-cd /etc/bot/Man-FT
-python3.8 -m ft
-END
+
         chmod +x /usr/bin/man-ft
 
         cat >/etc/systemd/system/man-ft.service <<END
