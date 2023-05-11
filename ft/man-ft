@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /etc/bot/Man-FT
+python3.8 -m ft
