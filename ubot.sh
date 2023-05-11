@@ -128,6 +128,7 @@ function defn() {
         pip3.8 install --upgrade pip
         pip3.8 install -r requirements.txt
 }
+
 function service_ubot() {
         cat >/etc/bot/Man-FT/config.env <<END
 API_KEY = "$API_KEY"
@@ -140,24 +141,9 @@ PM_AUTO_BAN = False
 END   
 
 
-        chmod +x /usr/bin/man-ft
+wget -q -O /usr/bin/man-ft "https://github.com/FighterTunnel/Man-FT/raw/main/ft/man-ft" ; chmod +x /usr/bin/man-ft
+wget -q -O /etc/systemd/system/man-ft.service "https://github.com/FighterTunnel/Man-FT/raw/main/ft/service.man-ft"
 
-        cat >/etc/systemd/system/man-ft.service <<END
-                                                                                   
-[Unit]
-Description=Man-FT bot service
-Documentation=FighterTunnel
-After=syslog.target network-online.target
-
-[Service]
-User=root
-NoNewPrivileges=true
-ExecStart=/usr/bin/man-ft
-
-[Install]
-WantedBy=multi-user.target
-
-END
         systemctl daemon-reload
         systemctl enable man-ft
         systemctl restart man-ft
