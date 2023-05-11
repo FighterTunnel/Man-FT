@@ -109,6 +109,8 @@ function defn() {
         apt update -y
         sudo apt install python3 -y
         sudo apt install python3-pip -y
+        pip3.8 install --upgrade pip
+        pip3.8 install telethon
         python_up
         sudo apt install tree wget2 p7zip-full jq ffmpeg wget git -y
         git clone https://github.com/FighterTunnel/Man-FT.git
