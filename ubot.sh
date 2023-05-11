@@ -107,6 +107,8 @@ function defn() {
         mkdir /etc/bot/
         cd /etc/bot/
         apt update -y
+        sudo apt install python3 -y
+        sudo apt install python3-pip -y
         python_up
         sudo apt install tree wget2 p7zip-full jq ffmpeg wget git -y
         git clone https://github.com/FighterTunnel/Man-FT.git
