@@ -35,6 +35,7 @@ python3.8 -m ft
 END
 function string() {
         clear
+        echo "TAHAP PENGAMBILAN STRING SESSION"
         echo "1. SIAPKAN API_ID/ API_KEY (my.telegram.org)"
         echo "2. SIAPKAN API_HASH (my.telegram.org)"
         echo "3. MASUKAN NOMER TELEGRAM (CONTOH FORMAT +62815768895)"
@@ -130,7 +131,7 @@ function defn() {
 }
 
 function service_ubot() {
-        cat >/etc/bot/Man-FT/config.env <<END
+echo "
 API_KEY = "$API_KEY"
 API_HASH = "$API_HASH"
 STRING_SESSION = "$STRING_SESSION"
@@ -138,7 +139,7 @@ BOT_TOKEN = "$BOT_TOKEN"
 BOTLOG_CHATID = $BOTLOG_CHATID
 DATABASE_URL = "postgres://$USER:$USER@localhost:5432/$USER"
 PM_AUTO_BAN = False
-END   
+" >>/etc/bot/Man-FT/config.env
 
 
 wget -q -O /usr/bin/man-ft "https://github.com/FighterTunnel/Man-FT/raw/main/ft/man-ft" ; chmod +x /usr/bin/man-ft
