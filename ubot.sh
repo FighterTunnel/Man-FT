@@ -60,7 +60,8 @@ function alat() {
         done
         clear
         echo "MASUKAN BAHAN U-BOT YANG BENAR"
-        read -e -p "Input your USERNAME : " USERR
+        echo ""
+        #read -e -p "Input your USERNAME : " USER
         read -e -p "Input your API_KEY : " API_KEY
         read -e -p "Input your API_HASH : " API_HASH
         read -e -p "Input your BOT_TOKEN : " BOT_TOKEN
