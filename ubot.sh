@@ -116,8 +116,6 @@ function defn() {
         apt update -y
         sudo apt install python3 -y
         sudo apt install python3-pip -y
-        pip3.8 install --upgrade pip
-        pip3.8 install telethon
         python_up
         sudo apt install tree wget2 p7zip-full jq ffmpeg wget git -y
         curl -fsSL https://deb.nodesource.com/setup_16.x | sudo bash -
@@ -129,6 +127,7 @@ function defn() {
         git clone https://github.com/FighterTunnel/Man-FT.git
         wget -q https://raw.githubusercontent.com/mrismanaziz/Man-Userbot/Man-Userbot/requirements.txt
         pip3.8 install --upgrade pip
+        pip3.8 install telethon
         pip3.8 install -r requirements.txt
 }
 
