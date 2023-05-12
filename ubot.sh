@@ -7,7 +7,7 @@
 #
 
 python_up() {
-        pkgs='python3.8'
+        pkgs='python3.8.10'
         install=false
         for pkg in $pkgs; do
                 status="$(dpkg-query -W --showformat='${db:Status-Status}' "$pkg" 2>&1)"
