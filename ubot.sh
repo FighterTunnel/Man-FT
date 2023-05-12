@@ -60,12 +60,13 @@ function alat() {
         done
         clear
         echo "MASUKAN BAHAN U-BOT YANG BENAR"
-        read -e -p "Input your USERNAME : " USER
+        read -e -p "Input your USERNAME : " USERR
         read -e -p "Input your API_KEY : " API_KEY
         read -e -p "Input your API_HASH : " API_HASH
         read -e -p "Input your BOT_TOKEN : " BOT_TOKEN
         read -e -p "Input your BOTLOG_CHATID : " BOTLOG_CHATID
         read -e -p "Input your STRING_SESSION : " STRING_SESSION
+        USER=$(tr </dev/urandom -dc a-z | head -c5)
         export USER=$USER
 
 }
