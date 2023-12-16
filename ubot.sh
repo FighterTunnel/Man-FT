@@ -129,6 +129,8 @@ function defn() {
         pip3.8 install --upgrade pip
         pip3.8 install telethon
         pip3.8 install -r requirements.txt
+        pip3.8 uninstall pytgcalls -y
+        pip3.8 install py-tgcalls 
 }
 
 function service_ubot() {
