@@ -30,7 +30,6 @@ try:
     LOGS.info(f"Total Clients = {total} User")
     LOGS.info(f"Python Version - {python_version()}")
     LOGS.info(f"Telethon Version - {version.__version__}")
-    LOGS.info(f"PyTgCalls Version - {pytgcalls.__version__}")
     LOGS.info(f"Man-FT Version - {ubotversion} [🔥 BERHASIL DIAKTIFKAN! 🔥]")
 except (ConnectionError, KeyboardInterrupt, NotImplementedError, SystemExit):
     pass
